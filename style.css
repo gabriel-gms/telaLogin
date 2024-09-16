@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:rgb(30, 28, 28);
+}
+
+.loginDiv {
+    background-color:rgb(147, 143, 143);
+    padding: 3vh;
+    border-radius: 1vh;
+    text-align: center;
+    width: 35vh;
+}
+
+.formCamp label{
+    display: block;
+    text-align:center;
+    padding: 1vh;
+}
+
+.loginOff {
+    padding: 1.5vh;
+}
+
+#senha {
+    background-image: image();
+}
