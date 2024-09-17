@@ -2,6 +2,20 @@ const email = document.getElementById('email')
 const password = document.getElementById('password')
 const button = document.querySelector('button')
 const form = document.querySelector('.formCamp')
+const viewPassword = document.querySelector('i')
+
+viewPassword.addEventListener('click', viewPw)
+
+function viewPw() {
+    if(password.getAttribute('type') === 'password'){
+        password.setAttribute('type', 'text')
+        viewPassword.setAttribute('class', 'bi bi-eye-slash')
+    }
+    else if(password.getAttribute('type') === 'text'){
+        password.setAttribute('type', 'password')
+        viewPassword.setAttribute('class', 'bi bi-eye')
+    }
+}
 
 button.addEventListener('click', (e)=>{
     e.preventDefault()

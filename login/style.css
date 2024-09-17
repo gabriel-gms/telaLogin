@@ -26,6 +26,18 @@ body{
     padding: 1.5vh;
 }
 
-#senha {
-    background-image: image();
+#password {
+    font-size: 15px;
+    position: relative;
+    left: 3%;
+}
+
+i {
+    cursor: pointer;
+    position: relative;
+    right: 7%;
+}
+
+#email {
+    font-size: 15px;
 }
