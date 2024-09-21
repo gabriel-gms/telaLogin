@@ -3,6 +3,8 @@ const password = document.getElementById('password')
 const button = document.querySelector('button')
 const form = document.querySelector('.formCamp')
 const viewPassword = document.querySelector('i')
+const verify = document.querySelectorAll('.verify')
+const areaAlert = document.querySelector('#areaAlert')
 
 viewPassword.addEventListener('click', viewPw)
 
@@ -32,11 +34,17 @@ function check(){
     const checkP = checkPassword(regexPassword, password.value)
 
     if(checkP == true && checkE == true){
-        //form.submit()
-        alert('válido')
+        form.submit()
     }
     else {
-        alert('errado')
+        verify.forEach((v,i)=>{
+            if(v.value === ''){
+                const footer = document.querySelectorAll('footer')
+                footer[i].innerHTML = 'campo vazio'
+                v.style.borderColor = 'red'
+                areaAlert.style.display = 'block'
+            }
+        })
     }
 }
 

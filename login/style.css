@@ -4,6 +4,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-color:rgb(30, 28, 28);
 }
@@ -40,4 +41,21 @@ i {
 
 #email {
     font-size: 15px;
+}
+
+footer {
+    font-size: 15px;
+}
+
+#areaAlert {
+    background-color:rgb(147, 143, 143);
+    border-radius: 1vh;
+    text-align: center;
+    max-width: 1000px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#areaAlert p, h4 {
+    margin: 3px 3px 3px 3px;
 }

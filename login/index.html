@@ -8,14 +8,22 @@
     <title>Acesso</title>
 </head>
 <body>
+    <div id="areaAlert">
+            <h4>Ajuda</h4>
+            <p>O email deve conter @, domínio e ".com"</p>
+            <p>A senha deve conter maiúscula, minúscula, caractere especial, números e no mínimo oito caracteres</p>
+        
+    </div>
     <div class="loginDiv">
         <h2>Realize seu login</h2>
-            <form class="formCamp">
+            <form class="formCamp" method="get">
                 <label>E-mail<br>
-                    <input id="email" type="text" placeholder="insira seu email">
+                    <input id="email" class="verify" type="text" placeholder="insira seu email">
+                    <footer></footer>
                 </label>
                 <label>Senha<br>
-                    <input id="password" type="password" placeholder="insira sua senha"><i class="bi bi-eye"></i>
+                    <input id="password" class="verify" type="password" placeholder="insira sua senha"><i class="bi bi-eye"></i>
+                    <footer></footer>
                 </label>
                 <button>Entrar</button>
                 <div class="loginOff">
