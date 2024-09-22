@@ -35,19 +35,48 @@ function check(){
 
     if(checkP == true && checkE == true){
         form.submit()
-    }
-    else {
+    } else {
         verify.forEach((v,i)=>{
             if(v.value === ''){
                 const footer = document.querySelectorAll('footer')
                 footer[i].innerHTML = 'campo vazio'
                 v.style.borderColor = 'red'
-                areaAlert.style.display = 'block'
+            }
+            else if (v.value){
+                
+                switch(i){
+                    case 0:
+                        if(checkEmail(regexEmail, email.value)){
+                            const footer = document.querySelectorAll('footer')
+                            footer[0].innerHTML = ''
+                            v.style.borderColor = ''
+                        }
+                        else {
+                            const footer = document.querySelectorAll('footer')
+                            footer[0].innerHTML = 'email incorreto'
+                            v.style.borderColor = 'red'
+                            areaAlert.style.display = 'block'
+                        }
+                    case 1:
+                        if(checkPassword(regexPassword, password.value)){
+                            const footer = document.querySelectorAll('footer')
+                            footer[1].innerHTML = ''
+                            v.style.borderColor = ''
+                        }
+                        else {
+                            const footer = document.querySelectorAll('footer')
+                            footer[1].innerHTML = 'senha incorreta'
+                            v.style.borderColor = 'red'
+                            areaAlert.style.display = 'block'
+                        }
+                }
+        
             }
         })
+
     }
 }
-
+            
 function checkEmail(regexEmailTest, emailTest){
     if(regexEmailTest.test(emailTest)){
         return true
@@ -59,7 +88,3 @@ function checkPassword(regexPasswordTest, passwordTest){
         return true
     }
 }
-
-
-
-
